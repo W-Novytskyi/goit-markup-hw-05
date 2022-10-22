@@ -150,6 +150,10 @@ padding: 94px 0 0;
     border: 1px solid transparent;
     cursor: pointer;
 }
+
+/* модальне вікно */
+
+
 /* overlay */
 .hero {
     max-width: 1600px;
