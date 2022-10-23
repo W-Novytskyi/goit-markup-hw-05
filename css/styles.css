@@ -62,6 +62,9 @@ padding: 94px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-nav:not(:last-child){
     margin-right: 50px;
@@ -70,6 +73,9 @@ padding: 94px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link {
     display: flex;
@@ -261,6 +267,31 @@ padding: 94px 0 0;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
+.work-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.work-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color:rgba(47, 48, 58, 0.8);
+}
+.activity-title {
+    position: absolute;
+    bottom: 0;
+    padding: 27px 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-white-color)
+}
 
 .work-title,
 .team-title,
@@ -323,6 +354,9 @@ padding: 94px 0 0;
     background-color: var(--primary-white-color);
     border-radius: 50%;
     color: var(--icon-color);
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .net-icon {
     fill: currentColor;
@@ -350,6 +384,9 @@ padding: 94px 0 0;
     align-items: center;
     justify-content: center;
     color: var(--icon-color);
+    transition-property: color, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon {
     fill: currentColor;
@@ -388,6 +425,9 @@ footer {
     line-height: 1.7;
     letter-spacing: 0.03em;
     cursor: pointer;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .map {
     color: var(--primary-white-color);
@@ -438,6 +478,9 @@ footer {
     background-color: rgba(255, 255, 255, 0.1);;
     border-radius: 50%;
     color: var(--primary-white-color);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-net-icon {
@@ -447,7 +490,6 @@ footer {
 .footer-net-link:hover,
 .footer-net-link:focus {
     background-color: var(--accent-text-color);
-    color: var(--primary-white-color);
 }
 
 
@@ -476,6 +518,9 @@ footer {
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid transparent;
+    transition-property: color, background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter .button:hover,
 .filter .button:focus {
@@ -493,10 +538,50 @@ footer {
     font-size: 16px;
     line-height: 1.87;
 }
+
+.card-thumb {
+    position: relative;
+    overflow: hidden;
+}
+.card-thumb:hover,
+.card-thumb:focus{
+    opacity: 1;
+    transform: translateY(0);
+}
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-overlay {
+    padding: 63px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--primary-white-color);
+    
+}
+
 .container-work {
     padding: 20px;
     background: var(--primary-white-color);
     border: 1px solid #EEEEEE;
+}
+.portfolio-item{
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
 .portfolio-item:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
