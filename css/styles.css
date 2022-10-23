@@ -62,9 +62,6 @@ padding: 94px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-nav:not(:last-child){
     margin-right: 50px;
@@ -73,9 +70,6 @@ padding: 94px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link {
     display: flex;
@@ -84,6 +78,9 @@ padding: 94px 0 0;
     padding: 32px 0;
     color: var(--primary-text-color);
     text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-icon {
     fill: currentColor;
@@ -98,6 +95,9 @@ padding: 94px 0 0;
     padding: 32px 0;
     color: var(--title-text-color);
     text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-current {
     position: relative;
@@ -180,10 +180,12 @@ padding: 94px 0 0;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
+    transition: opacity 250ms, visibility 250ms;
 }
 
 .backdrop.is-hidden {
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
 }
 
@@ -425,20 +427,17 @@ footer {
     line-height: 1.7;
     letter-spacing: 0.03em;
     cursor: pointer;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.map {
-    color: var(--primary-white-color);
-    text-decoration: none;
 }
 .link-footer:not(:last-child){
     margin-bottom: 9px;
 }
-.contact-footer {
+.contact-footer,
+.map {
     color: var(--contact-footer-color);
     text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address :hover,
 .address :focus {
@@ -543,8 +542,8 @@ footer {
     position: relative;
     overflow: hidden;
 }
-.card-thumb:hover,
-.card-thumb:focus{
+.card-thumb:hover .card-overlay,
+.card-thumb:focus .card-overlay{
     opacity: 1;
     transform: translateY(0);
 }
